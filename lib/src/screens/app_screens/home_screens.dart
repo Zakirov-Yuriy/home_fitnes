@@ -80,7 +80,7 @@ class HomeScreen extends StatelessWidget {
               ),
             ),
             // Проверка, авторизован ли пользователь
-            if (user != null) ...[
+            // if (user != null) ...[
               // Карусели с упражнениями, доступные только для авторизованных пользователей
               Semantics(
                 label: 'Карусель с упражнениями для тела',
@@ -112,7 +112,7 @@ class HomeScreen extends StatelessWidget {
                 child: ContainerCarouselSix(),
               ),
               const SizedBox(height: 20),
-            ] else ...[
+            // ] else ...[
               // Для незарегистрированных пользователей отображаем только одну карусель
               Semantics(
                 label: 'Карусель с упражнениями для тела',
@@ -130,19 +130,19 @@ class HomeScreen extends StatelessWidget {
               ),
               const SizedBox(height: 20),
               // Сообщение для незарегистрированных пользователей
-              Padding(
-                padding: EdgeInsets.all(16.0),
-                child: Text(
-                  S.of(context).Log_in,
-                  style: TextStyle(
-                    fontSize: 16,
-                    color: Colors.black,
-                  ),
-                  textAlign: TextAlign.center,
-                ),
-              ),
+              // Padding(
+              //   padding: EdgeInsets.all(16.0),
+              //   child: Text(
+              //     S.of(context).Log_in,
+              //     style: TextStyle(
+              //       fontSize: 16,
+              //       color: Colors.black,
+              //     ),
+              //     textAlign: TextAlign.center,
+              //   ),
+              // ),
             ],
-          ],
+          // ],
         ),
       ),
     );
