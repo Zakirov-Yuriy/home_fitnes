@@ -200,6 +200,7 @@ import 'package:email_validator/email_validator.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:home_fitness/services/snack_bar.dart';
+import 'package:home_fitness/services/auth_service.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
@@ -233,7 +234,7 @@ class _LoginScreenState extends State<LoginScreen> {
     if (!isValid) return;
 
     try {
-      await FirebaseAuth.instance.signInWithEmailAndPassword(
+      await AuthService.signInWithEmail(
         email: emailTextInputController.text.trim(),
         password: passwordTextInputController.text.trim(),
       );
@@ -257,6 +258,26 @@ class _LoginScreenState extends State<LoginScreen> {
     }
 
     navigator.pushNamedAndRemoveUntil('/home', (Route<dynamic> route) => false);
+  }
+
+  Future<void> loginWithGoogle() async {
+    final navigator = Navigator.of(context);
+    try {
+      await AuthService.signInWithGoogle();
+      navigator.pushNamedAndRemoveUntil('/home', (Route<dynamic> route) => false);
+    } on FirebaseAuthException catch (e) {
+      SnackBarService.showSnackBar(
+        context,
+        'Ошибка входа через Google: ${e.message}',
+        true,
+      );
+    } catch (e) {
+      SnackBarService.showSnackBar(
+        context,
+        'Ошибка: $e',
+        true,
+      );
+    }
   }
 
   @override
@@ -357,6 +378,41 @@ class _LoginScreenState extends State<LoginScreen> {
                       style: TextStyle(
                         fontSize: 24.0,
                         color: Colors.white,
+                      ),
+                    ),
+                  ),
+                ),
+              ),
+              const SizedBox(height: 30),
+
+              // Кнопка Google Sign-In
+              Semantics(
+                label: 'Войти через Google',
+                child: Container(
+                  decoration: BoxDecoration(
+                    border: Border.all(color: Colors.grey),
+                    borderRadius: BorderRadius.circular(30),
+                  ),
+                  child: ElevatedButton.icon(
+                    style: ElevatedButton.styleFrom(
+                      minimumSize: const Size(double.infinity, 50),
+                      backgroundColor: Colors.white,
+                      shadowColor: Colors.transparent,
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(30),
+                      ),
+                    ),
+                    onPressed: loginWithGoogle,
+                    icon: const Icon(
+                      Icons.account_circle,
+                      color: Colors.blue,
+                      size: 28,
+                    ),
+                    label: const Text(
+                      'Войти через Google',
+                      style: TextStyle(
+                        fontSize: 18.0,
+                        color: Colors.black,
                       ),
                     ),
                   ),

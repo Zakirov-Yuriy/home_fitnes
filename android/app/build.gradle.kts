@@ -41,16 +41,21 @@ android {
                     val (key, value) = cleanLine.split('=', limit = 2)
                     keystoreProperties[key.trim()] = value.trim()
                 }
+                val storeFilePath = keystoreProperties["storeFile"]
+                if (!storeFilePath.isNullOrEmpty()) {
+                    storeFile = file(storeFilePath)
+                    storePassword = keystoreProperties["storePassword"]
+                    keyAlias = keystoreProperties["keyAlias"]
+                    keyPassword = keystoreProperties["keyPassword"]
+                }
             }
-            storeFile = file(keystoreProperties["storeFile"] ?: "")
-            storePassword = keystoreProperties["storePassword"]
-            keyAlias = keystoreProperties["keyAlias"]
-            keyPassword = keystoreProperties["keyPassword"]
         }
     }
     buildTypes {
         release {
-            signingConfig = signingConfigs.getByName("release")
+            if (rootProject.file("key.properties").exists()) {
+                signingConfig = signingConfigs.getByName("release")
+            }
             isMinifyEnabled = false
             isShrinkResources = false
             // proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")

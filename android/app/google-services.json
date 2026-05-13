@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "893121124318",
+    "project_id": "home-fitness-ef859",
+    "storage_bucket": "home-fitness-ef859.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:893121124318:android:654c8955d4beb733c1ef4f",
+        "android_client_info": {
+          "package_name": "com.zak.home_fitness"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "893121124318-ct86baijuf0nhii0g9848fiqnduvnb5d.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.zak.home_fitness",
+            "certificate_hash": "a305be3a5b9e3eba1558699ef3568cb4eeb4af0e"
+          }
+        },
+        {
+          "client_id": "893121124318-qgc6lo60o0cocr4pu3vpt3bhfl5o8807.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCLPGJERkSi5lH7vt3RkRbXnUwOjIff9eo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "893121124318-qgc6lo60o0cocr4pu3vpt3bhfl5o8807.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

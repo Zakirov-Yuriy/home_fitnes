@@ -50,11 +50,11 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyDWyJdcmQnkqB03vaR0J0H0eC0qfTFg_n0',
-    appId: '1:966539895454:android:f6ef05ba5a6d470ef6d18f',
-    messagingSenderId: '966539895454',
-    projectId: 'home-fitness-db',
-    storageBucket: 'home-fitness-db.appspot.com',
+    apiKey: 'AIzaSyCLPGJERkSi5lH7vt3RkRbXnUwOjIff9eo',
+    appId: '1:893121124318:android:654c8955d4beb733c1ef4f',
+    messagingSenderId: '893121124318',
+    projectId: 'home-fitness-ef859',
+    storageBucket: 'home-fitness-ef859.firebasestorage.app',
   );
 
   static const FirebaseOptions ios = FirebaseOptions(

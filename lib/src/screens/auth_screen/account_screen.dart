@@ -59,6 +59,7 @@
 
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:home_fitness/services/auth_service.dart';
 
 class AccountScreen extends StatefulWidget {
   const AccountScreen({super.key});
@@ -72,7 +73,7 @@ class _AccountScreenState extends State<AccountScreen> {
 
   Future<void> signOut() async {
     final navigator = Navigator.of(context);
-    await FirebaseAuth.instance.signOut();
+    await AuthService.signOut();
     navigator.pushNamedAndRemoveUntil('/home', (Route<dynamic> route) => false);
   }
 
