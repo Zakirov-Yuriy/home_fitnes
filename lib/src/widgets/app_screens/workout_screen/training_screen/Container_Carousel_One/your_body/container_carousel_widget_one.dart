@@ -6,7 +6,7 @@ import '../../../../../../screens/app_screens/workout_screen/your_body/full_body
 
 class ContainerCarouselOne extends StatelessWidget {
   final List<String> images = [
-    'assets/images/training_image/workout_image/whole_body.png',
+    'https://res.cloudinary.com/dccyuxqzj/image/upload/v1779103922/whole_body_krtjwf.png',
     'assets/images/training_image/workout_image/GIRL_WITH.jpg',
   ];
 
@@ -50,7 +50,9 @@ class ContainerCarouselOne extends StatelessWidget {
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(15),
                       image: DecorationImage(
-                        image: AssetImage(images[index]),
+                        image: images[index].startsWith('http')
+                            ? NetworkImage(images[index]) as ImageProvider
+                            : AssetImage(images[index]),
                         fit: BoxFit.cover,
                       ),
                     ),

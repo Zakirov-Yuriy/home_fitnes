@@ -17,26 +17,26 @@ class LegsAndThighsContent extends StatelessWidget {
         ),
         ExerciseWidget(
           imagePath:
-              'assets/images/training_image/workout_image/your_body/higt knees.gif',
+              'https://res.cloudinary.com/dccyuxqzj/image/upload/v1779102881/higt_knees_dhiqkp.gif',
           exerciseText: S.of(context).High_Knees,
           setText: S.of(context).Duration,
           durationText: S.of(context).three_repeat_60s,
           subtitleText: S.of(context).High_Knees_description,
           videoUrl:
-              'https://firebasestorage.googleapis.com/v0/b/fitnes-live-db.appspot.com/o/video%2FYour%20body%2Fhigt_knees.mp4?alt=media&token=f9742b8d-5671-4b1c-b1ea-22c7cbbad95e',
+              'https://res.cloudinary.com/dccyuxqzj/video/upload/f_auto,q_auto/video/Your body/higt_knees',
           semanticLabel:
               'Упражнение Высокие колени, длительность 60 секунд, 3 повторения.',
         ),
         const CustomDivider(),
         ExerciseWidget(
           imagePath:
-              'assets/images/training_image/workout_image/your_body/Lateral lunges.gif',
+              'https://res.cloudinary.com/dccyuxqzj/image/upload/v1779102881/Lateral_lunges_mwhstd.gif',
           exerciseText: S.of(context).Side_lunges,
           setText: S.of(context).Duration,
           durationText: S.of(context).three_rep_30s,
           subtitleText: S.of(context).Side_lunges_description,
           videoUrl:
-              'https://firebasestorage.googleapis.com/v0/b/fitnes-live-db.appspot.com/o/video%2FYour%20body%2FLateral_lunges.mp4?alt=media&token=e8e2410b-5fe3-4bb9-b737-fcb0e6f25939',
+              'https://res.cloudinary.com/dccyuxqzj/video/upload/f_auto,q_auto/video/Your body/Lateral_lunges',
           semanticLabel:
               'Упражнение Боковые выпады, длительность 30 секунд, 3 повторения.',
         ),
@@ -49,7 +49,7 @@ class LegsAndThighsContent extends StatelessWidget {
           durationText: S.of(context).three_repeat_60s,
           subtitleText: S.of(context).Kettlebell_Squat_description,
           videoUrl:
-              'https://firebasestorage.googleapis.com/v0/b/fitnes-live-db.appspot.com/o/video%2FLegs%20and%20thighs%2FKettlebell%20goblet%20squat.mp4?alt=media&token=9f0a0ab3-bbd2-4c0f-b456-320d08bbd21f',
+              'https://res.cloudinary.com/dccyuxqzj/video/upload/f_auto,q_auto/video/Legs and thighs/Kettlebell goblet squat',
           semanticLabel:
               'Упражнение Приседание с гирей, длительность 60 секунд, 3 повторения.',
         ),
@@ -62,7 +62,7 @@ class LegsAndThighsContent extends StatelessWidget {
           durationText: S.of(context).three_repeat_60s,
           subtitleText: S.of(context).Rowing_on_one_leg_description,
           videoUrl:
-              'https://firebasestorage.googleapis.com/v0/b/fitnes-live-db.appspot.com/o/video%2FLegs%20and%20thighs%2Fone%20leg%20row.mp4?alt=media&token=94b0a388-22e0-40a0-83e8-969429d341f6',
+              'https://res.cloudinary.com/dccyuxqzj/video/upload/f_auto,q_auto/video/Legs and thighs/one leg row',
           semanticLabel:
               'Упражнение Гребля на одной ноге, длительность 60 секунд, 3 повторения.',
         ),
@@ -75,20 +75,20 @@ class LegsAndThighsContent extends StatelessWidget {
           durationText: S.of(context).three_repeat_60s,
           subtitleText: S.of(context).Bulgarian_squats_description,
           videoUrl:
-              'https://firebasestorage.googleapis.com/v0/b/fitnes-live-db.appspot.com/o/video%2FLegs%20and%20thighs%2Fbulgarian%20split%20squats.mp4?alt=media&token=5fff8dc5-1b80-4882-bbb4-615636a0aa82',
+              'https://res.cloudinary.com/dccyuxqzj/video/upload/f_auto,q_auto/video/Legs and thighs/bulgarian split squats',
           semanticLabel:
               'Упражнение Болгарские приседания, длительность 60 секунд, 3 повторения.',
         ),
         const CustomDivider(),
         ExerciseWidget(
           imagePath:
-              'assets/images/training_image/workout_image/your_body/Running.gif',
+              'https://res.cloudinary.com/dccyuxqzj/image/upload/v1779102883/Running_vfvzxy.gif',
           exerciseText: S.of(context).Running,
           setText: S.of(context).Duration,
           durationText: S.of(context).three_repeat_60s,
           subtitleText: S.of(context).bug_description,
           videoUrl:
-              'https://firebasestorage.googleapis.com/v0/b/fitnes-live-db.appspot.com/o/video%2FYour%20body%2FRunning.mp4?alt=media&token=fca48f8e-2d90-4e4e-a753-087fbd205304',
+              'https://res.cloudinary.com/dccyuxqzj/video/upload/f_auto,q_auto/video/Your body/Running',
           semanticLabel:
               'Упражнение Бег, длительность 60 секунд, 3 повторения.',
         ),
@@ -101,7 +101,7 @@ class LegsAndThighsContent extends StatelessWidget {
           durationText: S.of(context).three_rep_30s,
           subtitleText: S.of(context).Donkey_Kicks_description,
           videoUrl:
-              'https://firebasestorage.googleapis.com/v0/b/fitnes-live-db.appspot.com/o/video%2FLegs%20and%20thighs%2FDonkey%20kicks.mp4?alt=media&token=799d8abd-5b46-49ba-b7ae-b95e3184c205',
+              'https://res.cloudinary.com/dccyuxqzj/video/upload/f_auto,q_auto/video/Legs and thighs/Donkey kicks',
           semanticLabel:
               'Упражнение Ослиные удары, длительность 30 секунд, 3 повторения.',
         ),
@@ -114,7 +114,7 @@ class LegsAndThighsContent extends StatelessWidget {
           durationText: S.of(context).three_rep_30s,
           subtitleText: S.of(context).Squats_and_dumbbell_press_description,
           videoUrl:
-              'https://firebasestorage.googleapis.com/v0/b/fitnes-live-db.appspot.com/o/video%2FLegs%20and%20thighs%2FDumbbell%20squat%20and%20press.mp4?alt=media&token=937eebd5-8ac8-4756-92fe-7c1059c7e391',
+              'https://res.cloudinary.com/dccyuxqzj/video/upload/f_auto,q_auto/video/Legs and thighs/Dumbbell squat and press',
           semanticLabel:
               'Упражнение Приседания и жим гантелей, длительность 30 секунд, 3 повторения.',
         ),
@@ -127,7 +127,7 @@ class LegsAndThighsContent extends StatelessWidget {
           durationText: S.of(context).three_rep_30s,
           subtitleText: S.of(context).Single_Leg_Raise_description,
           videoUrl:
-              'https://firebasestorage.googleapis.com/v0/b/fitnes-live-db.appspot.com/o/video%2FLegs%20and%20thighs%2Fone%20leg%20deadlift.mp4?alt=media&token=2274383f-50d2-42c7-b5b8-1376ccc5e9d6',
+              'https://res.cloudinary.com/dccyuxqzj/video/upload/f_auto,q_auto/video/Legs and thighs/one leg deadlift',
           semanticLabel:
               'Упражнение Подъем одной ноги, длительность 30 секунд, 3 повторения.',
         ),
@@ -140,7 +140,7 @@ class LegsAndThighsContent extends StatelessWidget {
           durationText: S.of(context).three_rep_30s,
           subtitleText: S.of(context).Wall_Squats_description,
           videoUrl:
-              'https://firebasestorage.googleapis.com/v0/b/fitnes-live-db.appspot.com/o/video%2FLegs%20and%20thighs%2FWall%20squats.mp4?alt=media&token=fd328fe3-a39c-4b6a-93f0-986b68c015cc',
+              'https://res.cloudinary.com/dccyuxqzj/video/upload/f_auto,q_auto/video/Legs and thighs/Wall squats',
           semanticLabel:
               'Упражнение Приседания у стены, длительность 30 секунд, 3 повторения.',
         ),

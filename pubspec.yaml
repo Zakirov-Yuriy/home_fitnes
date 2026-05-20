@@ -78,7 +78,7 @@ flutter:
     - assets/images/
     - assets/images/survey_screens_image/
     - assets/images/training_image/workout_image/
-    - assets/images/training_image/workout_image/your_body/
+    # - assets/images/training_image/workout_image/your_body/
     - assets/images/training_image/workout_image/melts_fat/
     - assets/images/training_image/workout_image/legs_and_thighs/
     - assets/images/training_image/workout_image/glutes_and_legs/

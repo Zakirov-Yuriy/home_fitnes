@@ -25,7 +25,7 @@ class BellyFatBurnerThighsContent extends StatelessWidget {
             durationText: S.of(context).three_repeat_60s,
             subtitleText: S.of(context).Thigh_Tuck_description,
             videoUrl:
-                'https://firebasestorage.googleapis.com/v0/b/fitnes-live-db.appspot.com/o/video%2Fbelly%20fat%20burner%2FHip%20thruster.mp4?alt=media&token=3f8fccac-4d82-4ba4-bc8e-9441d0bc08c6',
+                'https://res.cloudinary.com/dccyuxqzj/video/upload/f_auto,q_auto/video/belly fat burner/Hip thruster',
             semanticLabel:
                 'Упражнение Подтягивание бедра, длительность 60 секунд, 3 повторения.',
           ),
@@ -42,7 +42,7 @@ class BellyFatBurnerThighsContent extends StatelessWidget {
             durationText: S.of(context).three_rep_30s,
             subtitleText: S.of(context).Push_ups_with_clapping_description,
             videoUrl:
-                'https://firebasestorage.googleapis.com/v0/b/fitnes-live-db.appspot.com/o/video%2Fbelly%20fat%20burner%2FClapping%20push%20ups.mp4?alt=media&token=a293b30c-d382-4e23-b30e-9d4669583706',
+                'https://res.cloudinary.com/dccyuxqzj/video/upload/f_auto,q_auto/video/belly fat burner/Clapping push ups',
             semanticLabel:
                 'Упражнение Отжимания с хлопками, длительность 30 секунд, 3 повторения.',
           ),
@@ -59,7 +59,7 @@ class BellyFatBurnerThighsContent extends StatelessWidget {
             durationText: S.of(context).three_repeat_60s,
             subtitleText: S.of(context).Rise_of_Garhammer_description,
             videoUrl:
-                'https://firebasestorage.googleapis.com/v0/b/fitnes-live-db.appspot.com/o/video%2Fbelly%20fat%20burner%2FGar%20hammer%20raise.mp4?alt=media&token=99e5f34e-7d8e-4059-963e-9fa659762872',
+                'https://res.cloudinary.com/dccyuxqzj/video/upload/f_auto,q_auto/video/belly fat burner/Gar hammer raise',
             semanticLabel:
                 'Упражнение Подъем Гархаммер, длительность 60 секунд, 3 повторения.',
           ),
@@ -76,7 +76,7 @@ class BellyFatBurnerThighsContent extends StatelessWidget {
             durationText: S.of(context).three_repeat_60s,
             subtitleText: S.of(context).Gluteal_Bridge_description,
             videoUrl:
-                'https://firebasestorage.googleapis.com/v0/b/fitnes-live-db.appspot.com/o/video%2Fglutes%20and%20legs%2FGlute%20bridge.mp4?alt=media&token=80ee43cd-dfc8-4b8b-914e-843fb5d68de1',
+                'https://res.cloudinary.com/dccyuxqzj/video/upload/f_auto,q_auto/video/glutes and legs/Glute bridge',
             semanticLabel:
                 'Упражнение Ягодичный мостик, длительность 60 секунд, 3 повторения.',
           ),
@@ -93,7 +93,7 @@ class BellyFatBurnerThighsContent extends StatelessWidget {
             durationText: S.of(context).three_repeat_60s,
             subtitleText: S.of(context).Crunch_description,
             videoUrl:
-                'https://firebasestorage.googleapis.com/v0/b/fitnes-live-db.appspot.com/o/video%2Fbelly%20fat%20burner%2Fcrunch.mp4?alt=media&token=f01cdf53-f3ee-4698-9098-b19802063353',
+                'https://res.cloudinary.com/dccyuxqzj/video/upload/f_auto,q_auto/video/belly fat burner/crunch',
             semanticLabel:
                 'Упражнение Crunch, длительность 60 секунд, 3 повторения.',
           ),
@@ -110,7 +110,7 @@ class BellyFatBurnerThighsContent extends StatelessWidget {
             durationText: S.of(context).three_repeat_60s,
             subtitleText: S.of(context).Swimmers_description,
             videoUrl:
-                'https://firebasestorage.googleapis.com/v0/b/fitnes-live-db.appspot.com/o/video%2Fmelts_fat%2Fswimmers.mp4?alt=media&token=e9e218bc-0928-4a85-8f64-d20bcaa4af48',
+                'https://res.cloudinary.com/dccyuxqzj/video/upload/f_auto,q_auto/video/melts_fat/swimmers',
             semanticLabel:
                 'Упражнение Пловцы, длительность 60 секунд, 3 повторения.',
           ),
@@ -127,7 +127,7 @@ class BellyFatBurnerThighsContent extends StatelessWidget {
             durationText: S.of(context).three_rep_30s,
             subtitleText: S.of(context).Knife_from_a_prone_position_description,
             videoUrl:
-                'https://firebasestorage.googleapis.com/v0/b/fitnes-live-db.appspot.com/o/video%2Fbelly%20fat%20burner%2FJackknife%20from%20lying%20flat.mp4?alt=media&token=66b88472-d9e3-4f94-9aa0-7a7d1d043e99',
+                'https://res.cloudinary.com/dccyuxqzj/video/upload/f_auto,q_auto/video/belly fat burner/Jackknife from lying flat',
             semanticLabel:
                 'Упражнение Нож из положения лежа, длительность 30 секунд, 3 повторения.',
           ),
@@ -144,7 +144,7 @@ class BellyFatBurnerThighsContent extends StatelessWidget {
             durationText: S.of(context).three_rep_30s,
             subtitleText: S.of(context).Glute_bridge_and_leg_lifts_description,
             videoUrl:
-                'https://firebasestorage.googleapis.com/v0/b/fitnes-live-db.appspot.com/o/video%2Fbelly%20fat%20burner%2FGlute%20bridge%20to%20leg%20raise.mp4?alt=media&token=d8010723-953f-4616-943e-a050d45e1c30',
+                'https://res.cloudinary.com/dccyuxqzj/video/upload/f_auto,q_auto/video/belly fat burner/Glute bridge to leg raise',
             semanticLabel:
                 'Упражнение Ягодичный мостик и подъем ног, длительность 30 секунд, 3 повторения.',
           ),

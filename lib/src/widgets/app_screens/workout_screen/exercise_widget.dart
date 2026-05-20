@@ -34,10 +34,53 @@ class ExerciseWidget extends StatelessWidget {
           children: [
             Semantics(
               label: 'Изображение упражнения',
-              child: Image(
+              child: Container(
                 width: 100,
                 height: 100,
-                image: AssetImage(imagePath),
+                decoration: BoxDecoration(
+                  color: Colors.grey[300],
+                  borderRadius: BorderRadius.circular(8),
+                ),
+                child: imagePath.startsWith('http')
+                    ? Image.network(
+                        imagePath,
+                        width: 100,
+                        height: 100,
+                        fit: BoxFit.cover,
+                        errorBuilder: (context, error, stackTrace) {
+                          debugPrint('❌ Error loading image: $error');
+                          debugPrint('URL: $imagePath');
+                          return Container(
+                            color: Colors.grey[300],
+                            child: const Icon(Icons.image_not_supported),
+                          );
+                        },
+                        loadingBuilder: (context, child, loadingProgress) {
+                          if (loadingProgress == null) {
+                            return child;
+                          }
+                          return Center(
+                            child: CircularProgressIndicator(
+                              value: loadingProgress.expectedTotalBytes != null
+                                  ? loadingProgress.cumulativeBytesLoaded /
+                                      loadingProgress.expectedTotalBytes!
+                                  : null,
+                            ),
+                          );
+                        },
+                      )
+                    : Image(
+                        width: 100,
+                        height: 100,
+                        image: AssetImage(imagePath),
+                        fit: BoxFit.cover,
+                        errorBuilder: (context, error, stackTrace) {
+                          return Container(
+                            color: Colors.grey[300],
+                            child: const Icon(Icons.image_not_supported),
+                          );
+                        },
+                      ),
               ),
             ),
             Expanded(

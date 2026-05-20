@@ -45,9 +45,28 @@ class FullBodyWorkoutScreenState extends State<FullBodyWorkoutScreen> {
             flexibleSpace: FlexibleSpaceBar(
               background: Semantics(
                 label: 'Изображение для тренировки всего тела',
-                child: Image.asset(
-                  'assets/images/training_image/workout_image/whole_body.png',
+                child: Image.network(
+                  'https://res.cloudinary.com/dccyuxqzj/image/upload/v1779103922/whole_body_krtjwf.png',
                   fit: BoxFit.cover,
+                  errorBuilder: (context, error, stackTrace) {
+                    return Container(
+                      color: Colors.grey[300],
+                      child: const Icon(Icons.image_not_supported),
+                    );
+                  },
+                  loadingBuilder: (context, child, loadingProgress) {
+                    if (loadingProgress == null) {
+                      return child;
+                    }
+                    return Center(
+                      child: CircularProgressIndicator(
+                        value: loadingProgress.expectedTotalBytes != null
+                            ? loadingProgress.cumulativeBytesLoaded /
+                                loadingProgress.expectedTotalBytes!
+                            : null,
+                      ),
+                    );
+                  },
                 ),
               ),
             ),

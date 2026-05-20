@@ -25,7 +25,7 @@ class TightTonedArmsThighsContent extends StatelessWidget {
             durationText: S.of(context).three_repeat_60s,
             subtitleText: S.of(context).Dumbbell_Forward_Raise_description,
             videoUrl:
-                'https://firebasestorage.googleapis.com/v0/b/fitnes-live-db.appspot.com/o/video%2Ftight_toned_arms%2FFront%20dumbbel%20raise.mp4?alt=media&token=a3b51ef1-7621-423c-8612-af4db404580f',
+                'https://res.cloudinary.com/dccyuxqzj/video/upload/f_auto,q_auto/video/tight_toned_arms/Front dumbbel raise',
             semanticLabel:
                 'Упражнение Подъем гантелей вперед. Длительность: 3 повторения по 60 секунд. Возьмите гантели в каждую руку, станьте прямо. Поднимите гантели вперед, сохраняя прямые руки и контролируя движение.',
           ),
@@ -42,7 +42,7 @@ class TightTonedArmsThighsContent extends StatelessWidget {
             durationText: S.of(context).three_rep_30s,
             subtitleText: S.of(context).Upper_triceps_press_description,
             videoUrl:
-                'https://firebasestorage.googleapis.com/v0/b/fitnes-live-db.appspot.com/o/video%2Ftight_toned_arms%2Ftricep%20overhead%20press.mp4?alt=media&token=e13791d8-25d0-4301-afda-a52de66833c4',
+                'https://res.cloudinary.com/dccyuxqzj/video/upload/f_auto,q_auto/video/tight_toned_arms/tricep overhead press',
             semanticLabel:
                 'Упражнение Верхний жим трицепса. Длительность: 3 повторения по 30 секунд. Лягте на скамью или пол, возьмите гантели в руки над грудью с прямыми руками. Согните руки в локтях, опуская гантели к голове. Вернитесь в исходное положение, поднимая гантели вверх.',
           ),
@@ -59,7 +59,7 @@ class TightTonedArmsThighsContent extends StatelessWidget {
             durationText: S.of(context).three_repeat_60s,
             subtitleText: S.of(context).Squats_and_dumbbell_press_description,
             videoUrl:
-                'https://firebasestorage.googleapis.com/v0/b/fitnes-live-db.appspot.com/o/video%2Ftight_toned_arms%2Fdumbbell%20squat%20and%20press.mp4?alt=media&token=4c53d253-377f-49b6-83e1-551132e2ae1f',
+                'https://res.cloudinary.com/dccyuxqzj/video/upload/f_auto,q_auto/video/tight_toned_arms/dumbbell squat and press',
             semanticLabel:
                 'Упражнение Приседания и жим гантелей. Длительность: 3 повторения по 60 секунд. Возьмите гантели в каждую руку, станьте прямо. Сделайте приседание, затем поднимите гантели к плечам. Отталкивайтесь от пят, выполняя жим гантелей вверх.',
           ),
@@ -76,7 +76,7 @@ class TightTonedArmsThighsContent extends StatelessWidget {
             durationText: S.of(context).three_repeat_60s,
             subtitleText: S.of(context).Dumbbell_row_with_slope_description,
             videoUrl:
-                'https://firebasestorage.googleapis.com/v0/b/fitnes-live-db.appspot.com/o/video%2Ftight_toned_arms%2Fdumbbell%20bent%20over%20row.mp4?alt=media&token=bcbf3069-67d3-443b-b15b-7aefbde4e0b2',
+                'https://res.cloudinary.com/dccyuxqzj/video/upload/f_auto,q_auto/video/tight_toned_arms/dumbbell bent over row',
             semanticLabel:
                 'Упражнение Гантельный ряд с наклоном. Длительность: 3 повторения по 60 секунд. Возьмите гантели в каждую руку, станьте прямо. Наклонитесь вперед, держа гантели перед собой. Поднимите гантели к телу, сокращая лопатки.',
           ),
@@ -93,7 +93,7 @@ class TightTonedArmsThighsContent extends StatelessWidget {
             durationText: S.of(context).three_repeat_60s,
             subtitleText: S.of(context).Dumbbell_Raise_description,
             videoUrl:
-                'https://firebasestorage.googleapis.com/v0/b/fitnes-live-db.appspot.com/o/video%2Ftight_toned_arms%2Fdumbbell%20step%20up.mp4?alt=media&token=d8dd9b1a-d6c1-4d34-b0b4-1e6eae71a135',
+                'https://res.cloudinary.com/dccyuxqzj/video/upload/f_auto,q_auto/video/tight_toned_arms/dumbbell step up',
             semanticLabel:
                 'Упражнение Подъем гантелей. Длительность: 3 повторения по 60 секунд. Возьмите гантели в каждую руку, станьте прямо. Поднимите гантели к плечам, сохраняя прямые руки и контролируя движение.',
           ),
@@ -110,7 +110,7 @@ class TightTonedArmsThighsContent extends StatelessWidget {
             durationText: S.of(context).three_repeat_60s,
             subtitleText: S.of(context).Swings_with_dumbbells_description,
             videoUrl:
-                'https://firebasestorage.googleapis.com/v0/b/fitnes-live-db.appspot.com/o/video%2Ftight_toned_arms%2Fdumbbell%20peck%20fly.mp4?alt=media&token=a4eb17b1-4bae-4f6c-baf4-44906e27ed65',
+                'https://res.cloudinary.com/dccyuxqzj/video/upload/f_auto,q_auto/video/tight_toned_arms/dumbbell peck fly',
             semanticLabel:
                 'Упражнение Махи с гантелями. Длительность: 3 повторения по 60 секунд. Возьмите гантели в руки, станьте прямо. Разведите руки в стороны, поднимая гантели до уровня плеч. Медленно опустите гантели обратно и повторите движение.',
           ),
@@ -127,7 +127,7 @@ class TightTonedArmsThighsContent extends StatelessWidget {
             durationText: S.of(context).three_rep_30s,
             subtitleText: S.of(context).Standing_hammer_curl_description,
             videoUrl:
-                'https://firebasestorage.googleapis.com/v0/b/fitnes-live-db.appspot.com/o/video%2Ftight_toned_arms%2FStanding%20hammer%20curl.mp4?alt=media&token=2a4e2406-a186-4dc3-be0b-342401f82af0',
+                'https://res.cloudinary.com/dccyuxqzj/video/upload/f_auto,q_auto/video/tight_toned_arms/Standing hammer curl',
             semanticLabel:
                 'Упражнение Скручивание молота стоя. Длительность: 3 повторения по 30 секунд. Возьмите гантель в руку, станьте прямо. Поднимите гантель перед собой на уровень плеч. Поворачивайте торс в сторону противоположной руке, скручивая корпус.',
           ),
@@ -147,7 +147,7 @@ class TightTonedArmsThighsContent extends StatelessWidget {
                 .of(context)
                 .Military_dumbbell_press_in_a_seated_position_description,
             videoUrl:
-                'https://firebasestorage.googleapis.com/v0/b/fitnes-live-db.appspot.com/o/video%2Ftight_toned_arms%2FSeated%20dumbbell%20military%20press.mp4?alt=media&token=4b1ba2ef-23d2-4fb6-b35b-1622d01988d1',
+                'https://res.cloudinary.com/dccyuxqzj/video/upload/f_auto,q_auto/video/tight_toned_arms/Seated dumbbell military press',
             semanticLabel:
                 'Упражнение Военный жим гантелей в положении сидя. Длительность: 3 повторения по 30 секунд. Сядьте на скамью с поддержкой спины. Возьмите гантели в руки и поднимите их к плечам. Выпрямите руки вверх, поднимая гантели над головой.',
           ),
@@ -164,7 +164,7 @@ class TightTonedArmsThighsContent extends StatelessWidget {
             durationText: S.of(context).three_rep_30s,
             subtitleText: S.of(context).Push_ups_on_one_knee_description,
             videoUrl:
-                'https://firebasestorage.googleapis.com/v0/b/fitnes-live-db.appspot.com/o/video%2Ftight_toned_arms%2FOne%20knee%20push%20ups.mp4?alt=media&token=29c54022-90d3-44c5-a184-bb6c8ffbc63f',
+                'https://res.cloudinary.com/dccyuxqzj/video/upload/f_auto,q_auto/video/tight_toned_arms/One knee push ups',
             semanticLabel:
                 'Упражнение Отжимания на одном колене. Длительность: 3 повторения по 30 секунд. Встаньте на колени и руки, поддерживая верхнее тело. Опустите верхнее тело, согнув руки в локтях. Вернитесь в исходное положение, выпрямив руки.',
           ),

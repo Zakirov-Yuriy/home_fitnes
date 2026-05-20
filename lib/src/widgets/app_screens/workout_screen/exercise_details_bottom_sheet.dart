@@ -118,9 +118,42 @@ class _ExerciseDetailsBottomSheetState
                   ? 'Изображение упражнения: ${widget.exerciseText}'
                   : 'Видео упражнения: ${widget.exerciseText}',
               child: selectedIndex == 0
-                  ? Image(
-                      image: AssetImage(widget.imagePath),
-                    )
+                  ? widget.imagePath.startsWith('http')
+                      ? Image.network(
+                          widget.imagePath,
+                          fit: BoxFit.cover,
+                          errorBuilder: (context, error, stackTrace) {
+                            debugPrint('❌ Error loading image: $error');
+                            debugPrint('URL: ${widget.imagePath}');
+                            return Container(
+                              color: Colors.grey[300],
+                              child: const Icon(Icons.image_not_supported),
+                            );
+                          },
+                          loadingBuilder: (context, child, loadingProgress) {
+                            if (loadingProgress == null) {
+                              return child;
+                            }
+                            return Center(
+                              child: CircularProgressIndicator(
+                                value: loadingProgress.expectedTotalBytes !=
+                                        null
+                                    ? loadingProgress.cumulativeBytesLoaded /
+                                        loadingProgress.expectedTotalBytes!
+                                    : null,
+                                color:
+                                    const Color.fromRGBO(255, 51, 119, 1),
+                              ),
+                            );
+                          },
+                        )
+                      : Container(
+                          color: Colors.grey[300],
+                          child: Image(
+                            image: AssetImage(widget.imagePath),
+                            fit: BoxFit.cover,
+                          ),
+                        )
                   : _controller.value.isInitialized
                       ? AspectRatio(
                           aspectRatio: _controller.value.aspectRatio,

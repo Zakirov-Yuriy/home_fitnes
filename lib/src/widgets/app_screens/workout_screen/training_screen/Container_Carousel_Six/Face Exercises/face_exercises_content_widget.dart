@@ -25,7 +25,7 @@ class FaceExercisesThighsContent extends StatelessWidget {
             durationText: S.of(context).three_rep_30s,
             subtitleText: S.of(context).AEIOU_description,
             videoUrl:
-                'https://firebasestorage.googleapis.com/v0/b/fitnes-live-db.appspot.com/o/video%2FFace_exercises%2F_AEIOU_.mp4?alt=media&token=81f76b66-4b07-49ba-8c86-69372844c38f',
+                'https://res.cloudinary.com/dccyuxqzj/video/upload/f_auto,q_auto/video/Face_exercises/_AEIOU_',
             semanticLabel:
                 'Упражнение AEIOU, длительность 30 секунд, 3 повторения.',
           ),
@@ -44,7 +44,7 @@ class FaceExercisesThighsContent extends StatelessWidget {
             durationText: S.of(context).three_rep_30s,
             subtitleText: S.of(context).CHEEK_FIRMER_description,
             videoUrl:
-                'https://firebasestorage.googleapis.com/v0/b/fitnes-live-db.appspot.com/o/video%2FFace_exercises%2FCHEEK%20FIRMER.mp4?alt=media&token=04abd626-5d3a-4d87-b83f-85395ba449cd',
+                'https://res.cloudinary.com/dccyuxqzj/video/upload/f_auto,q_auto/video/Face_exercises/CHEEK FIRMER',
             semanticLabel:
                 'Упражнение CHEEK FIRMER, длительность 30 секунд, 3 повторения.',
           ),
@@ -63,7 +63,7 @@ class FaceExercisesThighsContent extends StatelessWidget {
             durationText: S.of(context).three_rep_30s,
             subtitleText: S.of(context).DRAWN_CHEEKS_description,
             videoUrl:
-                'https://firebasestorage.googleapis.com/v0/b/fitnes-live-db.appspot.com/o/video%2FFace_exercises%2FDRAWN%20CHEEKS.mp4?alt=media&token=ed8bfa2e-f5a6-47d6-a6aa-600768643e65',
+                'https://res.cloudinary.com/dccyuxqzj/video/upload/f_auto,q_auto/video/Face_exercises/DRAWN CHEEKS',
             semanticLabel:
                 'Упражнение DRAWN CHEEKS, длительность 30 секунд, 3 повторения.',
           ),
@@ -82,7 +82,7 @@ class FaceExercisesThighsContent extends StatelessWidget {
             durationText: S.of(context).three_rep_30s,
             subtitleText: S.of(context).EYE_LIFT_description,
             videoUrl:
-                'https://firebasestorage.googleapis.com/v0/b/fitnes-live-db.appspot.com/o/video%2FFace_exercises%2FEYE%20LIFT.mp4?alt=media&token=5f3c4c14-ac8f-49b2-be47-f0461c41aebf',
+                'https://res.cloudinary.com/dccyuxqzj/video/upload/f_auto,q_auto/video/Face_exercises/EYE LIFT',
             semanticLabel:
                 'Упражнение EYE LIFT, длительность 30 секунд, 3 повторения.',
           ),
@@ -101,7 +101,7 @@ class FaceExercisesThighsContent extends StatelessWidget {
             durationText: S.of(context).three_rep_30s,
             subtitleText: S.of(context).EYES_CIRCLES_description,
             videoUrl:
-                'https://firebasestorage.googleapis.com/v0/b/fitnes-live-db.appspot.com/o/video%2FFace_exercises%2FEYES%20CIRCLES.mp4?alt=media&token=3391646c-6e98-415a-bf9a-48e45720a791',
+                'https://res.cloudinary.com/dccyuxqzj/video/upload/f_auto,q_auto/video/Face_exercises/EYES CIRCLES',
             semanticLabel:
                 'Упражнение EYES CIRCLES, длительность 30 секунд, 3 повторения.',
           ),
@@ -120,7 +120,7 @@ class FaceExercisesThighsContent extends StatelessWidget {
             durationText: S.of(context).three_rep_30s,
             subtitleText: S.of(context).AW_LINE_description,
             videoUrl:
-                'https://firebasestorage.googleapis.com/v0/b/fitnes-live-db.appspot.com/o/video%2FFace_exercises%2FJAW%20LINE.mp4?alt=media&token=a824229a-a12e-48bc-b2ca-2ba0de77f7fd',
+                'https://res.cloudinary.com/dccyuxqzj/video/upload/f_auto,q_auto/video/Face_exercises/JAW LINE',
             semanticLabel:
                 'Упражнение JAW LINE, длительность 30 секунд, 3 повторения.',
           ),
@@ -139,7 +139,7 @@ class FaceExercisesThighsContent extends StatelessWidget {
             durationText: S.of(context).three_rep_30s,
             subtitleText: S.of(context).LION_description,
             videoUrl:
-                'https://firebasestorage.googleapis.com/v0/b/fitnes-live-db.appspot.com/o/video%2FFace_exercises%2FLION.mp4?alt=media&token=6c1dc0ba-6351-4f06-a29f-992742fc7a12',
+                'https://res.cloudinary.com/dccyuxqzj/video/upload/f_auto,q_auto/video/Face_exercises/LION',
             semanticLabel:
                 'Упражнение LION, длительность 30 секунд, 3 повторения.',
           ),
@@ -158,7 +158,7 @@ class FaceExercisesThighsContent extends StatelessWidget {
             durationText: S.of(context).three_rep_30s,
             subtitleText: S.of(context).NOSE_TOUCHING_description,
             videoUrl:
-                'https://firebasestorage.googleapis.com/v0/b/fitnes-live-db.appspot.com/o/video%2FFace_exercises%2FNOSE%20TOUCHING.mp4?alt=media&token=43c2bcfe-ba33-4d16-9d1f-94a5a571cf2b',
+                'https://res.cloudinary.com/dccyuxqzj/video/upload/f_auto,q_auto/video/Face_exercises/NOSE TOUCHING',
             semanticLabel:
                 'Упражнение NOSE TOUCHING, длительность 30 секунд, 3 повторения.',
           ),
@@ -177,7 +177,7 @@ class FaceExercisesThighsContent extends StatelessWidget {
             durationText: S.of(context).three_rep_30s,
             subtitleText: S.of(context).PUFFY_CHEEKS_description,
             videoUrl:
-                'https://firebasestorage.googleapis.com/v0/b/fitnes-live-db.appspot.com/o/video%2FFace_exercises%2FPUFFY%20CHEEKS.mp4?alt=media&token=ad8be357-e50c-4338-9b11-fa68bb894222',
+                'https://res.cloudinary.com/dccyuxqzj/video/upload/f_auto,q_auto/video/Face_exercises/PUFFY CHEEKS',
             semanticLabel:
                 'Упражнение PUFFY CHEEKS, длительность 30 секунд, 3 повторения.',
           ),
@@ -196,7 +196,7 @@ class FaceExercisesThighsContent extends StatelessWidget {
             durationText: S.of(context).three_rep_30s,
             subtitleText: S.of(context).SMILE_description,
             videoUrl:
-                'https://firebasestorage.googleapis.com/v0/b/fitnes-live-db.appspot.com/o/video%2FFace_exercises%2FSMILE.mp4?alt=media&token=12941ffa-b6a7-441b-a686-3a9005482f5a',
+                'https://res.cloudinary.com/dccyuxqzj/video/upload/f_auto,q_auto/video/Face_exercises/SMILE',
             semanticLabel:
                 'Упражнение SMILE, длительность 30 секунд, 3 повторения.',
           ),
@@ -215,7 +215,7 @@ class FaceExercisesThighsContent extends StatelessWidget {
             durationText: S.of(context).three_rep_30s,
             subtitleText: S.of(context).UNDERCHIN_DUCK_description,
             videoUrl:
-                'https://firebasestorage.googleapis.com/v0/b/fitnes-live-db.appspot.com/o/video%2FFace_exercises%2FUNDERCHIN%20DUCK.mp4?alt=media&token=de0de133-0d95-4c5f-bc9e-8aaa348c951c',
+                'https://res.cloudinary.com/dccyuxqzj/video/upload/f_auto,q_auto/video/Face_exercises/UNDERCHIN DUCK',
             semanticLabel:
                 'Упражнение UNDERCHIN DUCK, длительность 30 секунд, 3 повторения.',
           ),
@@ -234,7 +234,7 @@ class FaceExercisesThighsContent extends StatelessWidget {
             durationText: S.of(context).three_rep_30s,
             subtitleText: S.of(context).SMILING_FISH_FACE_description,
             videoUrl:
-                'https://firebasestorage.googleapis.com/v0/b/fitnes-live-db.appspot.com/o/video%2FFace_exercises%2FSMILING%20FISH%20FACE.mp4?alt=media&token=ffb3d7ee-9e79-4d37-b9fd-5d0960ff87fc',
+                'https://res.cloudinary.com/dccyuxqzj/video/upload/f_auto,q_auto/video/Face_exercises/SMILING FISH FACE',
             semanticLabel:
                 'Упражнение SMILING FISH FACE, длительность 30 секунд, 3 повторения.',
           ),
