@@ -204,7 +204,7 @@ class _ResetPasswordScreenState extends State<ResetPasswordScreen> {
 
     const snackBar = SnackBar(
       content: Text('Сброс пароля осуществлен. Проверьте почту'),
-      backgroundColor: Colors.green,
+      backgroundColor: Color(0xFF161D25),
     );
 
     scaffoldMessenger.showSnackBar(snackBar);

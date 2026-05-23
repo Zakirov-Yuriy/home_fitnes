@@ -48,6 +48,7 @@ class MyApp extends StatelessWidget {
       supportedLocales: S.delegate.supportedLocales,
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
+        scaffoldBackgroundColor: const Color(0xFF161D25),
         pageTransitionsTheme: const PageTransitionsTheme(
           builders: {TargetPlatform.android: CupertinoPageTransitionsBuilder()},
         ),

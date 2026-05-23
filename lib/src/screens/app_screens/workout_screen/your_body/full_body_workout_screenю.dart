@@ -26,7 +26,7 @@ class FullBodyWorkoutScreenState extends State<FullBodyWorkoutScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor: const Color(0xFF161D25),
       body: CustomScrollView(
         controller: _scrollController,
         slivers: [

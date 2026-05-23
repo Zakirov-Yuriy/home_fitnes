@@ -53,7 +53,7 @@ class _ExerciseDetailsBottomSheetState
     return SingleChildScrollView(
       child: Container(
         decoration: const BoxDecoration(
-          color: Colors.white,
+          color: Color(0xFF161D25),
           borderRadius: BorderRadius.only(
             topLeft: Radius.circular(30),
             topRight: Radius.circular(30),
