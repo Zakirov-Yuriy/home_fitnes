@@ -3,6 +3,7 @@ import 'dart:ui';
 import 'package:flutter_svg/flutter_svg.dart';
 import '../../models/workout_models.dart';
 import '../../theme/app_colors.dart';
+import '../../../services/cloudinary_service.dart';
 import '../../widgets/exercise_details_sheet.dart';
 
 class WorkoutDayScreen extends StatefulWidget {
@@ -142,7 +143,8 @@ class _WorkoutDayScreenState extends State<WorkoutDayScreen>
       automaticallyImplyLeading: false,
       flexibleSpace: FlexibleSpaceBar(
         stretchModes: const [StretchMode.zoomBackground],
-        background: _SafeImage(imagePath: widget.config.heroImagePath),
+        // TEST: тестовая Cloudinary картинка вместо widget.config.heroImagePath
+        background: const _SafeImage(imagePath: CloudinaryService.testImageUrl),
       ),
     );
   }
@@ -168,15 +170,15 @@ class _WorkoutDayScreenState extends State<WorkoutDayScreen>
                   ),
                 ),
               ),
-              Container(
-                width: 40, height: 40,
-                // decoration: BoxDecoration(
-                //   color: AppColors.card,
-                //   borderRadius: BorderRadius.circular(12),
-                // ),
-                child: const Icon(Icons.tune_rounded,
-                    color: AppColors.textSecondary, size: 25),
-              ),
+              // Container(
+              //   width: 40, height: 40,
+              //   // decoration: BoxDecoration(
+              //   //   color: AppColors.card,
+              //   //   borderRadius: BorderRadius.circular(12),
+              //   // ),
+              //   child: const Icon(Icons.tune_rounded,
+              //       color: AppColors.textSecondary, size: 25),
+              // ),
             ],
           ),
           const SizedBox(height: 12),
@@ -413,8 +415,14 @@ class _ExerciseRow extends StatelessWidget {
               ClipOval(
                 child: Container(
                   color: Colors.white,
+                  // Постер (стоп-кадр) из видео упражнения. Если у упражнения
+                  // ещё нет своего видео — fallback на тестовое.
                   child: _SafeImage(
-                    imagePath: exercise.imagePath,
+                    imagePath: exercise.videoUrl != null
+                        ? CloudinaryService.getVideoThumbnailFromUrl(
+                            exercise.videoUrl!,
+                          )
+                        : CloudinaryService.testVideoThumbnailUrl,
                     width: 76,
                     height: 76,
                   ),

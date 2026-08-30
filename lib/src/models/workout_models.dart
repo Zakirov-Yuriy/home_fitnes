@@ -4,16 +4,18 @@ class Exercise {
   final String imagePath;
   final int durationSeconds;
   final String? gifUrl;
+  final String? videoUrl;              // <- НОВОЕ: URL видео упражнения (Cloudinary)
   final String? tutorialImagePath;
   final String? description;
-  final List<String> targetMuscles;     // <- НОВОЕ: группы мышц для чипов
-  final String? anatomyImagePath;       // <- НОВОЕ: схема анатомии
+  final List<String> targetMuscles;     // <- группы мышц для чипов
+  final String? anatomyImagePath;       // <- схема анатомии
 
   const Exercise({
     required this.name,
     required this.imagePath,
     this.durationSeconds = 30,
     this.gifUrl,
+    this.videoUrl,
     this.tutorialImagePath,
     this.description,
     this.targetMuscles = const [],

@@ -1,5 +1,9 @@
-import 'package:flutter/material.dart';import 'package:flutter_svg/flutter_svg.dart';import '../models/workout_models.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
+import 'package:video_player/video_player.dart';
+import '../models/workout_models.dart';
 import '../theme/app_colors.dart';
+import '../../services/cloudinary_service.dart';
 
 /// Открыть bottom sheet с деталями упражнения.
 /// [exercises] — весь список дня (для листания стрелками 1/N).
@@ -276,19 +280,104 @@ class _MediaPreview extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // «Как делать» → tutorialImagePath, «Видео» → gifUrl, иначе fallback на imagePath
-    final path = isHowTo
-        ? (exercise.tutorialImagePath ?? exercise.imagePath)
-        : (exercise.gifUrl ?? exercise.imagePath);
-    final isNetwork = path.startsWith('http');
+    // Таб «Как делать» → показываем статичную картинку-туториал
+    // Таб «Видео» → рендерим видеоплеер Cloudinary
+    if (isHowTo) {
+      final path = exercise.tutorialImagePath ?? exercise.imagePath;
+      final isNetwork = path.startsWith('http');
+      return Container(
+        color: Colors.white,
+        alignment: Alignment.center,
+        child: Image(
+          image: isNetwork
+              ? NetworkImage(path)
+              : AssetImage(path) as ImageProvider,
+          fit: BoxFit.cover,
+          width: double.infinity,
+          height: double.infinity,
+          errorBuilder: (_, __, ___) => Container(
+            color: AppColors.cardSoft,
+            alignment: Alignment.center,
+            child: const Icon(
+              Icons.fitness_center,
+              color: AppColors.textMuted,
+              size: 32,
+            ),
+          ),
+        ),
+      );
+    }
 
-    return Container(
-      color: Colors.white,
-      alignment: Alignment.center,
-      child: Image(
-        image: isNetwork
-            ? NetworkImage(path)
-            : AssetImage(path) as ImageProvider,
+    // TEST: пока некоторые упражнения ещё не имеют своего видео в Cloudinary,
+    // используем тестовое видео в качестве fallback. После полной заливки
+    // контента fallback можно убрать и оставить только exercise.videoUrl.
+    final videoUrl = exercise.videoUrl ?? CloudinaryService.testVideoUrl;
+    return _CloudinaryVideoPlayer(
+      // ключ по URL — пересоздаём плеер при переключении упражнения
+      key: ValueKey(videoUrl),
+      videoUrl: videoUrl,
+    );
+  }
+}
+
+/// Видеоплеер для видео из Cloudinary.
+/// Показывает постер до загрузки, видео проигрывается автоматически на повторе,
+/// без звука и без возможности паузы со стороны пользователя.
+class _CloudinaryVideoPlayer extends StatefulWidget {
+  final String videoUrl;
+  const _CloudinaryVideoPlayer({super.key, required this.videoUrl});
+
+  @override
+  State<_CloudinaryVideoPlayer> createState() => _CloudinaryVideoPlayerState();
+}
+
+class _CloudinaryVideoPlayerState extends State<_CloudinaryVideoPlayer> {
+  VideoPlayerController? _controller;
+  bool _isInitialized = false;
+  bool _hasError = false;
+
+  @override
+  void initState() {
+    super.initState();
+    _initVideo();
+  }
+
+  Future<void> _initVideo() async {
+    try {
+      final controller = VideoPlayerController.networkUrl(
+        Uri.parse(widget.videoUrl),
+      );
+      await controller.initialize();
+      if (!mounted) {
+        controller.dispose();
+        return;
+      }
+      controller
+        ..setLooping(true)
+        ..setVolume(0)
+        ..play();
+      setState(() {
+        _controller = controller;
+        _isInitialized = true;
+      });
+    } catch (_) {
+      if (!mounted) return;
+      setState(() => _hasError = true);
+    }
+  }
+
+  @override
+  void dispose() {
+    _controller?.dispose();
+    super.dispose();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    // Ошибка загрузки → fallback на постер из того же видео
+    if (_hasError) {
+      return Image.network(
+        CloudinaryService.getVideoThumbnailFromUrl(widget.videoUrl),
         fit: BoxFit.cover,
         width: double.infinity,
         height: double.infinity,
@@ -296,11 +385,48 @@ class _MediaPreview extends StatelessWidget {
           color: AppColors.cardSoft,
           alignment: Alignment.center,
           child: const Icon(
-            Icons.fitness_center,
+            Icons.error_outline,
             color: AppColors.textMuted,
             size: 32,
           ),
         ),
+      );
+    }
+
+    // Пока инициализируется → постер из Cloudinary + индикатор загрузки
+    if (!_isInitialized || _controller == null) {
+      return Stack(
+        fit: StackFit.expand,
+        children: [
+          Image.network(
+            CloudinaryService.getVideoThumbnailFromUrl(widget.videoUrl),
+            fit: BoxFit.cover,
+            errorBuilder: (_, __, ___) =>
+                Container(color: AppColors.cardSoft),
+          ),
+          Container(color: Colors.black.withOpacity(0.25)),
+          const Center(
+            child: SizedBox(
+              width: 38,
+              height: 38,
+              child: CircularProgressIndicator(
+                strokeWidth: 2.6,
+                valueColor: AlwaysStoppedAnimation<Color>(AppColors.accent),
+              ),
+            ),
+          ),
+        ],
+      );
+    }
+
+    // Видео готово — крутится автоматически на повторе, без интерактивности
+    final c = _controller!;
+    return FittedBox(
+      fit: BoxFit.cover,
+      child: SizedBox(
+        width: c.value.size.width,
+        height: c.value.size.height,
+        child: VideoPlayer(c),
       ),
     );
   }

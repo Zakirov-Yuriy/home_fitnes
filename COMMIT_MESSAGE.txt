@@ -1,0 +1,60 @@
+feat: Integrate Cloudinary video content and implement video player for exercises
+
+SUMMARY
+-------
+This commit adds full integration with Cloudinary for exercise media (images and videos).
+Introduces a new video player component that automatically plays exercise videos on loop
+without sound. Prepares the app for seamless content management via Cloudinary.
+
+CHANGES
+-------
+
+1. cloudinary_service.dart
+   - Added test URL constants (testImageUrl, testVideoUrl, testVideoThumbnailUrl)
+   - Implemented getVideoThumbnailFromUrl() method to extract video posters automatically
+   - Added comprehensive documentation for Cloudinary integration
+   - Refactored convertFromFirebaseUrl() for better readability
+
+2. workout_models.dart
+   - Added optional 'videoUrl' field to Exercise model
+   - Maintains backward compatibility with existing exercises
+
+3. workout_days_data.dart
+   - Integrated Cloudinary video URLs for exercises:
+     * _videoReverseCrunches: Exercise demonstration video
+     * _videoHighStepping: Exercise demonstration video
+   - Updated Exercise instances with video references
+
+4. home_screens.dart
+   - Replaced local placeholder image with Cloudinary test image
+   - Prepared infrastructure for dynamic hero images per workout day
+
+5. workout_day_screen.dart
+   - Updated hero section to use Cloudinary test image
+   - Implemented automatic poster extraction from exercise videos
+   - Added fallback to test video thumbnail for exercises without specific videos
+
+6. exercise_details_sheet.dart
+   - Major refactor of _MediaPreview widget for proper tab separation
+   - Implemented _CloudinaryVideoPlayer stateful widget:
+     * Automatic video initialization and playback
+     * Loop mode enabled for continuous playback
+     * Muted audio (no sound during video playback)
+     * Loading indicator with video poster preview
+     * Graceful error handling with fallback to poster image
+   - Improved error handling and resource cleanup in dispose()
+   - Video-only display in "Video" tab, image-only in "How To" tab
+
+TESTING
+-------
+- Test videos are currently used as fallback for exercises without specific videos
+- Video player properly handles network errors with poster fallback
+- Loading state shows poster image + progress indicator
+- Videos loop continuously without user control
+
+FUTURE
+------
+- Replace test constants with real exercise video URLs as content is migrated
+- Consider adding playback controls (pause/resume) if required by UX
+- Implement video caching strategy for better performance
+- Add analytics tracking for video engagement

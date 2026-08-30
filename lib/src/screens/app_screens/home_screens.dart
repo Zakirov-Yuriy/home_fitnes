@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'dart:ui';
 import '../../data/workout_days_data.dart';
 import '../../theme/app_colors.dart';
+import '../../../services/cloudinary_service.dart';
 import 'workout_day_screen.dart';
 
 /// Цветовая палитра нового UI
@@ -58,9 +59,8 @@ class _HomeScreenState extends State<HomeScreen> {
     _Stage(number: 4, title: 'Форма и энергия',   days: 10, startDay: 19),
   ];
 
-  // Пока единая заглушка-картинка для всех дней (потом заменим на массив)
-  static const String _placeholderImage =
-      'assets/images/training_image/workout_image/legs_and_thighs/Legs and thighs.jpg';
+  // Тестовая Cloudinary картинка (потом подменим на массив из конфигов дня)
+  static const String _placeholderImage = CloudinaryService.testImageUrl;
 
   // ScrollController для FAB «Назад ко дню N»
   final ScrollController _scrollController = ScrollController();
@@ -209,17 +209,17 @@ class _HomeScreenState extends State<HomeScreen> {
             child: ClipOval(
               child: BackdropFilter(
                 filter: ImageFilter.blur(sigmaX: 10, sigmaY: 10),
-                child: Container(
-                  width: 44,
-                  height: 44,
-                  decoration: BoxDecoration(
-                    color: Colors.white.withOpacity(0.1),
-                    shape: BoxShape.circle,
-                  ),
-                  alignment: Alignment.center,
-                  child: const Icon(Icons.tune_rounded,
-                      color: AppColors.textSecondary, size: 22),
-                ),
+                // child: Container(
+                //   width: 44,
+                //   height: 44,
+                //   decoration: BoxDecoration(
+                //     color: Colors.white.withOpacity(0.1),
+                //     shape: BoxShape.circle,
+                //   ),
+                //   alignment: Alignment.center,
+                //   child: const Icon(Icons.tune_rounded,
+                //       color: AppColors.textSecondary, size: 22),
+                // ),
               ),
             ),
           ),

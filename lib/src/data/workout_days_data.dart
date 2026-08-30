@@ -4,6 +4,18 @@ class WorkoutDaysData {
   static const _heroImg =
       'assets/images/training_image/workout_image/legs_and_thighs/Legs and thighs.jpg';
 
+  // ─── Cloudinary видео упражнений ──────────────────────────────────────
+  // Чтобы добавить новое упражнение, скопируй URL из Cloudinary и положи
+  // сюда новой константой. Поддерживаются любые .mp4 на Cloudinary —
+  // постер (превью) сгенерируется автоматически через CloudinaryService.
+  static const _videoReverseCrunches =
+      'https://res.cloudinary.com/dccyuxqzj/video/upload/v1779539683/'
+      'How_to_Do__REVERSE_CRUNCHES_1080p_online-video-cutter.com_pira3r.mp4';
+
+  static const _videoHighStepping =
+      'https://res.cloudinary.com/dccyuxqzj/video/upload/v1779541676/'
+      'How_to_Do__HIGH_STEPPING_1080p_cdiikq.mp4';
+
   // Пути к существующим гифкам (потом заменим на правильные по упражнениям)
   static const _exImg1 =
       'assets/images/training_image/workout_image/legs_and_thighs/Wall squats.gif';
@@ -33,11 +45,11 @@ class WorkoutDaysData {
       kcal: metrics.kcal,
       focusArea: 'Ноги',
       exercises: const [
-        // СТАЛО:
         Exercise(
           name: 'Приседания',
           imagePath: _exImg1,
-          targetMuscles: const [
+          videoUrl: _videoReverseCrunches,
+          targetMuscles: [
             'Ягодичные',
             'Четырехглавые',
             'Задние Мышцы Бедра',
@@ -45,7 +57,11 @@ class WorkoutDaysData {
           ],
           anatomyImagePath: 'assets/images/anatomy/squat.svg',
         ),
-        Exercise(name: 'Вприсядку', imagePath: _exImg2),
+        Exercise(
+          name: 'Вприсядку',
+          imagePath: _exImg2,
+          videoUrl: _videoHighStepping,
+        ),
         Exercise(name: 'Захлест Голени', imagePath: _exImg3),
         Exercise(
           name: 'Подъем На Носки С Разворотом Ступней Внутрь',
